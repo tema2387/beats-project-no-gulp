@@ -1,0 +1,51 @@
+.tablets-menu {
+    font-family: "alegreya", Helvetica, sans-serif;
+    font-size: rem(18px);
+    margin: 0px rem(30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: #313131;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+}
+
+.tablets-menu__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tablets-menu__item {
+    margin-top: rem(10px);
+
+    &:first-child {
+        margin-top: rem(0px);
+    }
+}
+
+.tablets-menu__link {
+    white-space: nowrap;
+    color: white;
+    font-size: 36px;
+}
+
+.close-button {
+    display: none;
+
+    @include tablets {
+        position: fixed;
+        top: 4%;
+        right: 2%;
+        z-index: 10000;
+    }
+}

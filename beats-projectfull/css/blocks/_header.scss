@@ -1,0 +1,13 @@
+.header {
+    background: #F5F5F5;
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+        padding-top: rem(25px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

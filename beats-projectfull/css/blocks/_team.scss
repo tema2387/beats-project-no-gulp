@@ -1,0 +1,141 @@
+.team {
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+    }
+
+    &__photo {
+        margin-bottom: 22px;
+
+        @include tablets {
+            display: none;
+            margin-bottom: 0px;
+        }
+
+        @include phones {
+            max-width: rem(138px);
+            max-height: rem(180px);
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: rem(54px);
+
+        @include tablets {
+            color: black;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        @include tablets {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        width: rem(220px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: rem(20px);
+
+
+        @include tablets {
+            margin-left: rem(0px);
+            display: inline-flex;
+
+            .team__photo {
+                order: 1;
+            }
+
+            .team__name {
+                order: 0;
+            }
+
+            .team__description {
+                order: 2;
+            }
+        }
+
+        &:first-child {
+            margin-left: rem(0px);
+        }
+
+        @include phones {
+            width: rem(280px);
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 42%;
+            right: -10%;
+            width: 9px;
+            height: 9px;
+            background: url(../img/team/Polygon.svg) no-repeat;
+        }
+    }
+
+    &__description {
+        margin-top: rem(10px);
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        transition: height 0.3s;
+
+        @include tablets {
+            margin-top: rem(21px);
+            transition: height 0s;
+        }
+
+
+        &-title {
+            color: black;
+
+            @include tablets {
+                font-weight: 700;
+                font-size: 18px;
+            }
+        }
+
+        &-subtitle {
+            color: #666666;
+            margin-top: rem(5px);
+
+            @include tablets {
+                margin-top: rem(10px);
+            }
+        }
+    }
+}
+
+.team__item--active {
+
+    .team__description {
+        height: 100%;
+    }
+
+    .team__photo {
+        @include tablets {
+            display: block;
+        }
+    }
+
+    .team__name:after {
+        transform: rotate(180deg);
+        top: 30%;
+    }
+
+}

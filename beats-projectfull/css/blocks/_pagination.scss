@@ -1,0 +1,61 @@
+.pagination {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+
+    @include tablets {
+        display: none;
+    }
+
+    .pagination__item {
+        margin-bottom: rem(5px);
+
+        &:last-child {
+            margin-bottom: rem(0px);
+        }
+
+        &--active {
+            .pagination__link {
+                border-color: red;
+                opacity: 1;
+
+                &:before {
+                    background-color: red;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+    .pagination__link {
+        width: rem(18px);
+        height: rem(18px);
+        display: block;
+        background: none;
+        border: rem(1px) solid transparent;
+        border-radius: 50%;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: rem(7px);
+            height: rem(7px);
+            background: #292929;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+        }
+    }
+
+    .pagination__link--colors {
+        &:before {
+            background: #fff;
+            opacity: 1;
+        }
+    }
+}

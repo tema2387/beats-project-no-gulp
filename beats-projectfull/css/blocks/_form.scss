@@ -1,0 +1,218 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+    &__main {
+        width: 100%;
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        @include tablets {
+            margin-top: rem(16px);
+            margin-left: 0px;
+            width: 72%;
+
+            &:first-child {
+                margin-top: rem(0px);
+            }
+        }
+
+        @include phones {
+            margin-left: 0px;
+            width: 100%;
+        }
+
+    }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__label {
+        flex: 1;
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(11px);
+
+        &:last-child {
+            margin-bottom: rem(0px);
+        }
+    }
+
+    &__textarea {
+        margin-bottom: rem(38px);
+
+        @include tablets {
+            margin-top: rem(16px);
+        }
+    }
+
+
+    .textarea {
+        width: 100%;
+        height: rem(150px);
+        resize: none;
+    }
+
+
+    &__radio {
+        margin-bottom: rem(20px);
+
+        @include phones {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            margin-right: rem(16px);
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin-right: rem(0px);
+            }
+        }
+
+        &-title {
+            margin-left: rem(10px);
+        }
+    }
+
+    &__checkbox {
+        margin-bottom: rem(48px);
+
+        @include phones {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-right: rem(16px);
+
+            &:last-child {
+                margin-right: rem(0px);
+            }
+        }
+
+        &-title {
+            margin-left: rem(10px);
+        }
+    }
+
+    &__button {
+        @include tablets {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.input--height {
+    height: rem(58px);
+
+    @include tablets {
+        height: rem(36px);
+    }
+}
+
+.input--border {
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
+
+    &:focus {
+        border: rem(3px) solid #E01F3D;
+    }
+}
+
+.button--size {
+    padding: rem(21px) rem(42px);
+}
+
+.button--reset {
+    padding: rem(0px);
+    background: none;
+    font-size: rem(16px);
+    text-transform: inherit;
+    font-weight: 400;
+    margin-left: rem(15px);
+}
+
+.form__label input[type="radio"] {
+    display: none;
+}
+
+
+.form__label .form__radio-checked:before {
+    content: " ";
+    display: block;
+    cursor: pointer;
+    width: rem(24px);
+    height: rem(24px);
+    background: #FFF;
+    border-radius: 50%;
+}
+
+.form__label input:checked+.form__radio-checked:before {
+    background: url(../img/form/ellipse2.png) center center no-repeat;
+    background-color: #FFF;
+}
+
+.form__label input:disabled+.form__radio-checked:before {
+    background: #fff;
+}
+
+.form__label input[type="checkbox"] {
+    display: none;
+}
+
+.form__label .form__checkbox-checked:before {
+    content: " ";
+    display: block;
+    cursor: pointer;
+    width: rem(24px);
+    height: rem(24px);
+    background: #FFF;
+}
+
+.form__label input:checked+.form__checkbox-checked:before {
+    background: url(../img/form/Vector1.png) center center no-repeat;
+    background-color: #FFF;
+}
+
+.form__label input:disabled+.form__checkbox-checked:before {
+    background: #FFF;
+}
+
+.form__label--position {
+    display: flex;
+}

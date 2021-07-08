@@ -1,0 +1,125 @@
+.description {
+    // padding-top: rem(100px);
+    // padding-bottom: rem(100px);
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: rem(600px);
+        text-align: center;
+
+        &-title {
+            @include phones {
+                color: #000000;
+                font-size: 32px;
+            }
+        }
+
+
+        &-subtitle {
+            margin-top: rem(18px);
+            color: #666666;
+
+            @include phones {
+                padding-left: rem(20px);
+                padding-right: rem(20px);
+            }
+        }
+    }
+
+    &__features {
+        margin-top: rem(62px);
+        width: 100%;
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+
+            @include phones {
+                flex-direction: column;
+            }
+        }
+
+        &-item {
+            width: rem(250px);
+            text-align: center;
+            position: relative;
+
+            @include phones {
+                display: flex;
+                text-align: unset;
+                width: 100%;
+                margin-bottom: rem(30px);
+
+                &:last-child {
+                    margin-bottom: rem(0px);
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                background: url(../img/description/iconafter.png) no-repeat;
+                height: rem(21px);
+                width: rem(67px);
+                left: rem(255px);
+                top: rem(55px);
+
+                @include tablets {
+                    display: none;
+                }
+
+                @include phones {
+                    display: none;
+                }
+            }
+
+            &:last-child:after {
+                content: none;
+            }
+        }
+
+        &-photo {
+            min-height: rem(150px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(../img/description/iconbackground.png) center center no-repeat;
+
+            @include phones {
+                width: rem(150px);
+            }
+        }
+
+        &-content {
+            margin-top: rem(24px);
+
+            @include phones {
+                flex: 1;
+            }
+
+            &-title {
+                font-size: rem(24px);
+                font-weight: 700;
+            }
+
+            @include phones {
+                color: #000000;
+            }
+
+
+            &-subtitle {
+                margin-top: rem(7px);
+                line-height: rem(18px);
+                color: #666666;
+            }
+        }
+    }
+}

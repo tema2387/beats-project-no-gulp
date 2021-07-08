@@ -1,0 +1,278 @@
+.choose {
+    background: #F5F5F5;
+    // padding-top: rem(66px);
+    // padding-bottom: rem(94px);
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__main {
+        margin-bottom: 0px;
+
+        .bx-wrapper {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__control-left {
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        z-index: 10;
+
+        @include tablets {
+            top: 25%;
+            left: 20%;
+        }
+
+        @include phones {
+            left: 1%;
+        }
+    }
+
+    &__control-right {
+        position: absolute;
+        top: 50%;
+        right: -1%;
+        z-index: 10;
+
+        @include tablets {
+            top: 25%;
+            right: 20%;
+        }
+
+        @include phones {
+            right: 1%;
+        }
+    }
+
+    &__photo {
+
+        @include tablets {
+            width: 306px;
+            height: 306px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+
+    &__menu {
+        display: inline-flex;
+        position: relative;
+
+        @include tablets {
+            display: none;
+        }
+
+        &:hover {
+            .choose__attributes {
+                opacity: 1;
+                left: 100%;
+                transition: opacity 0.5s;
+            }
+        }
+    }
+
+    &__dropdown {
+        background: #9A9A9A;
+        border-radius: 4px;
+        display: inline-flex;
+        padding: rem(25px) rem(25px);
+        cursor: pointer;
+    }
+
+    &__content {
+        width: 44%;
+        margin-left: rem(20px);
+
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin-top: rem(48px);
+            margin-left: rem(0px);
+        }
+
+        @include phones {
+            margin-top: rem(26px);
+        }
+
+
+        &-title {
+            margin-top: rem(25px);
+            font-size: rem(36px);
+            line-height: 1.1;
+            color: #292929;
+
+            @include tablets {
+                font-size: rem(28px);
+                text-align: center;
+                margin-top: rem(0px);
+            }
+
+            @include phones {
+                padding-right: 40px;
+                padding-left: 40px;
+                margin-top: rem(0px);
+            }
+        }
+
+        &-subtitle {
+            margin-top: rem(24px);
+            line-height: 1.2;
+            padding-right: rem(62px);
+            color: #666666;
+
+            @include tablets {
+                text-align: center;
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+
+            @include phones {
+                padding-right: 40px;
+                padding-left: 40px;
+            }
+        }
+    }
+
+    &__attributes {
+        position: absolute;
+        top: 0%;
+        left: 9999%;
+        opacity: 0;
+        min-width: rem(250px);
+        background: #FFFFFF;
+        padding: rem(18px) rem(20px) rem(24px) rem(60px);
+        border-radius: 4px;
+
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: rem(28px);
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-feature {
+            position: relative;
+
+            &-bluetooth:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/choose/css_sprites.png) -10px -10px;
+                left: -50%;
+            }
+
+            &-road:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/choose/css_sprites.png) -98px -10px;
+                left: -50%;
+            }
+
+            &-power:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/choose/css_sprites.png) -10px -54px;
+                left: -60%;
+            }
+
+            &-wreath:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/choose/css_sprites.png) -54px -10px;
+                left: -145%;
+            }
+
+            &-warranty:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background: url(../img/choose/css_sprites.png) -54px -54px;
+                left: -55%;
+            }
+        }
+    }
+
+    &__characteristic {
+        margin-top: rem(27px);
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            margin-right: rem(86px);
+
+            &:last-child {
+                margin-right: rem(0px);
+            }
+        }
+
+        &-title {
+            color: #666666;
+        }
+
+        &-subtitle {
+            font-weight: 700;
+        }
+    }
+
+    &__order {
+        display: flex;
+        align-items: center;
+        margin-top: rem(24px);
+
+        &-button {
+
+            @include phones {
+                padding: rem(18px) rem(41px);
+            }
+
+        }
+
+        &-price {
+            margin-right: rem(13px);
+            font-size: rem(36px);
+            color: #151515;
+
+            @include tablets {
+                margin-right: rem(30px);
+            }
+
+            @include phones {
+                font-size: rem(32px);
+            }
+        }
+    }
+}

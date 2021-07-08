@@ -1,0 +1,26 @@
+.footer {
+    padding: rem(20px) rem(0px) rem(20px) rem(0px);
+    // position: absolute;
+    background: #fff;
+    width: 100%;
+    // top: 92%;
+
+    @include phones {
+        top: 81%;
+    }
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        @include phones {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

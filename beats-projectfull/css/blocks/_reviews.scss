@@ -1,0 +1,138 @@
+.reviews {
+    // padding-top: rem(64px);
+    // padding-bottom: rem(64px);
+
+    &__title {
+        @include tablets {
+            color: black;
+        }
+    }
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content {
+        margin-top: rem(32px);
+        display: flex;
+        align-items: center;
+        background: #F8FAF9;
+        min-height: rem(248px);
+        padding: rem(42px) rem(20px) rem(42px) rem(42px);
+
+        @include tablets {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-img {
+            @include tablets {
+                width: rem(130px);
+                height: rem(130px);
+            }
+
+        }
+
+    }
+
+    &__list {
+        position: relative;
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+
+    &__content-description {
+        margin-left: rem(38px);
+
+        @include tablets {
+            text-align: center;
+            margin-left: rem(0px);
+            margin-top: rem(32px);
+        }
+
+        @include phones {
+            color: #000000;
+            margin-top: rem(21px);
+        }
+
+        &-title {
+            font-size: rem(24px);
+            font-weight: 700;
+        }
+
+        &-subtitle {
+            color: #666666;
+            margin-top: rem(27px);
+
+            @include tablets {
+                margin-top: rem(16px);
+            }
+
+            @include phones {
+                margin-top: rem(12px);
+            }
+        }
+
+        &-name {
+            font-size: rem(18px);
+            font-weight: 700;
+            margin-top: rem(38px);
+
+            @include tablets {
+                margin-top: rem(16px);
+            }
+
+            @include phones {
+                margin-top: rem(12px);
+            }
+        }
+    }
+
+    .reviews__switch {
+        margin-top: rem(15px);
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            margin-right: rem(7px);
+
+            &:last-child {
+                margin-right: rem(0px);
+            }
+        }
+
+        &-img {
+            height: rem(74px);
+            width: rem(74px);
+            border-radius: 50%;
+            border: rem(4px) solid transparent;
+        }
+    }
+}
+
+.reviews__item--active {
+    position: relative;
+    opacity: 1;
+}
+
+.reviews__switch-item--active {
+    .reviews__switch-img {
+        border: rem(4px) solid #E01F3D;
+    }
+}

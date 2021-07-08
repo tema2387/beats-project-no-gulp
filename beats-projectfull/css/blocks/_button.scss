@@ -1,0 +1,16 @@
+.button {
+    color: #fff;
+    text-transform: uppercase;
+    background: #E01F3D;
+    padding: rem(18px) rem(41px);
+    font-weight: 700;
+    border-radius: rem(100px);
+
+    @include tablets {
+        margin-bottom: rem(21px) rem(41px);
+    }
+
+    @include phones {
+        padding: rem(21px) rem(41px);
+    }
+}

@@ -1,0 +1,39 @@
+.features {
+    max-width: rem(500px);
+
+
+    @include tablets {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__item {
+        display: flex;
+        margin-left: rem(20px);
+        flex: 1;
+
+        &:first-child {
+            margin-left: rem(0px);
+        }
+    }
+
+    &__photo {
+        flex-shrink: 0;
+
+        &-img {
+            width: rem(50px);
+            height: rem(35px);
+        }
+    }
+
+
+    &__content {
+        margin-left: rem(12px);
+        line-height: rem(18px);
+    }
+}

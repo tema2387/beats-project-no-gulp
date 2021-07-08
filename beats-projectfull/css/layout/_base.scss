@@ -1,0 +1,101 @@
+html {
+    font-size: $basefontsize;
+
+    @include tablets {
+        font-size: $basefontsize - 1px;
+    }
+
+    @include phones {
+        font-size: $basefontsize - 2px;
+    }
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "play", Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.42;
+    background: #fff;
+    color: #292929;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: #292929;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    outline: none;
+}
+
+
+.wrapper {
+    overflow: hidden;
+    height: 100%;
+}
+
+.wrapper__content {
+    height: 100%;
+    transition: transform 1s;
+    will-change: transform;
+}
+
+main {
+    height: 100%;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    height: 0;
+}

@@ -1,0 +1,113 @@
+.socials {
+    @include phones {
+        margin-top: rem(19px);
+    }
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: rem(30px);
+        height: rem(30px);
+        margin-right: rem(10px);
+
+        &:last-child {
+            margin-right: rem(0px);
+        }
+
+        @include phones {
+            margin-right: rem(14px);
+
+            &:last-child {
+                margin-right: rem(0px);
+            }
+        }
+    }
+
+    &__vk {
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: rem(30px);
+            height: rem(30px);
+            background: url(../img/footer/css_sprites.png) -60px -10px;
+
+            @include tablets {
+                width: rem(32px);
+                height: rem(32px);
+            }
+
+            @include phones {
+                width: rem(35px);
+                height: rem(35px);
+            }
+        }
+    }
+
+    &__facebook {
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: rem(30px);
+            height: rem(30px);
+            background: url(../img/footer/css_sprites.png) -60px -60px;
+
+            @include tablets {
+                width: rem(32px);
+                height: rem(32px);
+            }
+
+            @include phones {
+                width: rem(35px);
+                height: rem(35px);
+            }
+        }
+    }
+
+    &__instagram {
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: rem(30px);
+            height: rem(30px);
+            background: url(../img/footer/css_sprites.png) -10px -60px;
+
+            @include tablets {
+                width: rem(32px);
+                height: rem(32px);
+            }
+
+            @include phones {
+                width: rem(35px);
+                height: rem(35px);
+            }
+        }
+    }
+
+    &__telegram {
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: rem(30px);
+            height: rem(30px);
+            background: url(../img/footer/css_sprites.png) -10px -10px;
+
+            @include tablets {
+                width: rem(32px);
+                height: rem(32px);
+            }
+
+            @include phones {
+                width: rem(35px);
+                height: rem(35px);
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.menu {
+    font-family: "alegreya", Helvetica, sans-serif;
+    font-size: rem(18px);
+    margin: 0px rem(30px);
+
+    @include tablets {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: rem(27px);
+    }
+
+    &__link {
+        white-space: nowrap;
+    }
+}

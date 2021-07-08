@@ -1,0 +1,52 @@
+// width
+$containerwidth: 940px;
+$basefontsize: 16px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//function
+@import "./layout/media";
+
+/* Layout */
+@import "./layout/base";
+
+/* header */
+@import "./blocks/header";
+@import "./blocks/menu";
+@import "./blocks/contacts";
+/* hamburger */
+@import "./blocks/hamburger";
+
+/* section presentation */
+@import "./blocks/presentation";
+@import "./blocks/button";
+@import "./blocks/features";
+
+/* section description */
+@import "./blocks/description";
+/* section choose */
+@import "./blocks/choose";
+/* section team */
+@import "./blocks/team";
+/*section colors */
+@import "./blocks/colors";
+/* section reviews */
+@import "./blocks/reviews";
+/* section player */
+@import "./blocks/player";
+/* section order */
+@import "./blocks/order";
+@import "./blocks/form";
+/* section map */
+@import "./blocks/map";
+/* footer */
+@import "./blocks/footer";
+@import "./blocks/socials";
+/* pagination */
+@import "./blocks/pagination";
+/* modal */
+@import "./blocks/modal";
+/*tablets-menu */
+@import "./blocks/_tablets-menu";

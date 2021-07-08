@@ -1,0 +1,74 @@
+.contacts {
+    font-size: rem(18px);
+    position: relative;
+    line-height: 1;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+
+    &__description {
+        font-style: normal;
+        margin-bottom: rem(5px);
+        font-size: rem(18px);
+
+        @include tablets {
+            font-size: rem(21px);
+        }
+
+        @include phones {
+            font-size: rem(18px);
+            color: black;
+        }
+    }
+
+
+    &__phone {
+        margin-left: rem(6px);
+    }
+
+    &__phone--color {
+
+        @include tablets {
+            color: #E01F3D;
+        }
+
+        @include phones {
+            color: #292929;
+        }
+    }
+
+    &__number {
+
+        @include phones {
+            margin-top: 12px;
+        }
+    }
+}
+
+.contacts--header {
+    @include tablets {
+        display: none;
+    }
+}
+
+.contacts--footer {
+    display: block;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.contacts__img {
+    fill: #292929;
+
+    @include tablets {
+        fill: red;
+    }
+
+    @include phones {
+        fill: #292929;
+    }
+}

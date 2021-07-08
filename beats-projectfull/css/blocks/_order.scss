@@ -1,0 +1,17 @@
+.order {
+    background: #181818;
+    // padding-top: rem(64px);
+    // padding-bottom: rem(64px);
+
+    &__container {
+        width: 95%;
+        max-width: $containerwidth;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        color: #fff;
+        margin-bottom: rem(58px);
+    }
+}
